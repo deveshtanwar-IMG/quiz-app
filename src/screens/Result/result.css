@@ -1,0 +1,81 @@
+.background{
+    background-image: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up{
+    background-color: white;
+    height: 380px;
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.points{
+    padding: 10px;
+}
+
+table {
+    margin: 20px auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px 20px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.start-btn{
+    padding: 10px 15px;
+    background-color: #800080;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.start-btn:hover{
+    font-size: 18px;
+}
+
+/* For smaller screens */
+
+@media screen and (max-width: 700px){
+    .pop-up{
+        width: 300px;
+        height: 400px;
+    }
+
+    .points{
+        padding: 20px;
+    }
+    
+    .points > div > p {
+        margin: 10px 0px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .mobile-view{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,133 @@
+.background{
+    background-image: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container{
+    background-color: white;
+    width: 600px;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    padding: 30px 60px;
+    margin: 0px 7px;
+}
+
+.q-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-clock{
+    font-size: 20px;
+    color: #800080;
+}
+
+.timer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.timer > p{
+    color: #800080;
+    font-size: 14px;
+}
+
+.q-no{
+    color: #800080;
+    font-size: 30px;
+}
+
+.q-total{
+    color: gray;
+    font-size: 14px;
+}
+
+.q{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+}
+
+.option-btn{
+    font-size: 18px;
+    text-align: left;
+    padding: 11px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.selected-answer-true{
+    font-size: 18px;
+    text-align: left;
+    padding: 11px;
+    border: 1px solid #578000;
+    border-radius: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.selected-answer-false{
+    font-size: 18px;
+    text-align: left;
+    padding: 11px;
+    border: 1px solid #e00909;
+    border-radius: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.selected-index{
+    background-color: rgb(219, 219, 219);
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submit-btn{
+    padding: 10px 15px; 
+    background-color: #ffdfff;
+    border: 1px solid #fa70fa;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* For smaller screens */
+
+@media screen and (max-width: 700px){
+    .quiz-container{
+        width: 300px;
+        height: 400px;
+    }
+
+    .q{
+        font-size: 18px;
+    }
+    
+    .option-btn{
+        font-size: 16px;
+        padding: 11px;
+        margin-top: 15px;
+    }
+
+    .selected-answer{
+        font-size: 16px;
+    }
+}
