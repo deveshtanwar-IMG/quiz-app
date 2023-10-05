@@ -22,7 +22,7 @@ const Result = () => {
   const data = useSelector(state => state.score)
 
   return (
-    <div className="background-result">
+    <div className="background-result noSelect">
       <div className='pop-up-result'>
         <div className='content'>
           <h2 style={{ fontFamily: "sans-serif" }} className='mobile-view'>Thank you for participating</h2>

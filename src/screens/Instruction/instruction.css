@@ -1,9 +1,18 @@
 .background{
     background-image: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .pop-up-ins{
@@ -40,7 +49,6 @@
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    margin-bottom: 5px;
 }
 
 .start-btn:hover{

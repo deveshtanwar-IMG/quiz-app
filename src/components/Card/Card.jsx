@@ -77,7 +77,7 @@ const Card = (props) => {
     }
 
     return (
-        <div className="background">
+        <div className="background noSelect">
             <div className='quiz-container'>
                 <div className='q-content'>
                     <div>

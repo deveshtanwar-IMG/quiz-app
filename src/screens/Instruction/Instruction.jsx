@@ -16,7 +16,7 @@ const Instruction = () => {
   const data = useSelector(state => state.score)
 
   return (
-    <div className="background">
+    <div className="background noSelect">
       <div className='pop-up-ins'>
           <div className='content-ins'>
             <h2>Welcome To The Quiz App</h2>
@@ -31,7 +31,7 @@ const Instruction = () => {
               </div>
             </div>
             <div className='actions'>
-              <button className="start-btn-ins" onClick={routeChange}>Start</button>
+              <button className="start-btn-ins" onClick={routeChange} style={{marginBottom: "20px"}}>Start</button>
             </div>
           </div>
       </div>
