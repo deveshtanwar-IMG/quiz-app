@@ -17,8 +17,8 @@ const Instruction = () => {
 
   return (
     <div className="background">
-      <div className='pop-up'>
-          <div className='content'>
+      <div className='pop-up-ins'>
+          <div className='content-ins'>
             <h2>Welcome To The Quiz App</h2>
             <div className='points'>
               <h3 style={{textAlign: "center"}}>Instructions  </h3>

@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.pop-up{
+.pop-up-ins{
     background-color: white;
     height: 380px;
     width: 600px;
@@ -14,7 +14,7 @@
     border-radius: 5px;
 }
 
-.content{
+.content-ins{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +49,7 @@
 /* For smaller screens */
 
 @media screen and (max-width: 700px){
-    .pop-up{
+    .pop-up-ins{
         width: 300px;
         height: 400px;
     }
@@ -62,5 +62,9 @@
         margin: 10px 0px;
         font-size: 15px;
         text-align: justify;
+    }
+
+    .content-ins > h2{
+        font-size: 18px;
     }
 }
