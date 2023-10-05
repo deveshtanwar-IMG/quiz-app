@@ -31,7 +31,7 @@ const Instruction = () => {
               </div>
             </div>
             <div className='actions'>
-              <button className="start-btn" onClick={routeChange}>Start</button>
+              <button className="start-btn-ins" onClick={routeChange}>Start</button>
             </div>
           </div>
       </div>
