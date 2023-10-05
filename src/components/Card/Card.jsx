@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './card.css'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateTotal, updateCorrect, updateWrong } from '../../store/slices/ScoreSlice';
+import { updateTotal, updateCorrect, updateWrong, updateAns } from '../../store/slices/ScoreSlice';
 
 
 const Card = (props) => {
@@ -25,6 +25,7 @@ const Card = (props) => {
     const [selectedAnsIndex, setSelectedAnsIndex] = useState(null);
     const [buttonDisabled, setButtonDisabled] = useState(false);
     const [timer, setTimer] = useState(9);
+    const[answer, setAnswer] = useState('Not Attempted');
 
     //Array destructuring
     const {question, choices, id, correctAnswer} = questions[activeQuestion];
@@ -47,12 +48,14 @@ const Card = (props) => {
     }, [activeQuestion, timer]);
 
     const nextHandler = () =>{
+        dispatch(updateAns(answer))
         dispatch(updateTotal(totalQuestions))
         setSelectedAns(null)
         setButtonDisabled(false)
         setTimer(9)
         if(activeQuestion < totalQuestions-1){
             setActiveQuestion((prev) => prev + 1);
+            setAnswer('Not Attempted')
         }
         if(activeQuestion == totalQuestions-1){
             navigate('/result');
@@ -60,7 +63,8 @@ const Card = (props) => {
     }
 
     const ansHandler = (answer, index) =>{
-        setSelectedAnsIndex(index)
+        setSelectedAnsIndex(index);
+        setAnswer(answer);
         if(answer === correctAnswer){
             setSelectedAns(true);
             dispatch(updateCorrect(data.correctQue + 1))

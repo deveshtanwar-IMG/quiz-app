@@ -1,4 +1,4 @@
-.background{
+.background-result{
     background-image: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
     height: 100vh;
     display: flex;
@@ -6,12 +6,11 @@
     align-items: center;
 }
 
-.pop-up{
+.pop-up-result{
     background-color: white;
-    height: 380px;
-    width: 600px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
+    width: fit-content;
 }
 
 .content{
@@ -30,17 +29,35 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
+}
   
-  td, th {
+td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px 20px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+}
+
+.result-que tr:nth-child(even) {
+    background-color: rgb(239, 182, 255);
+}
+
+.result-view{
+    display: flex;
+    gap: 20px
+}
+
+.result-que{
+    height: 300px;
+    overflow: auto;
+}
+
+#table-que{
+    font-size: 14px;
+}
+
+.result-que::-webkit-scrollbar{
+    display: none;
+}
 
 .start-btn{
     padding: 10px 15px;
@@ -51,6 +68,7 @@ table {
     border-radius: 5px;
     cursor: pointer;
     color: white;
+    margin: 10px 0px;
 }
 
 .start-btn:hover{
@@ -60,9 +78,9 @@ table {
 /* For smaller screens */
 
 @media screen and (max-width: 700px){
-    .pop-up{
+    .pop-up-result{
         width: 300px;
-        height: 400px;
+        /* height: 400px; */
     }
 
     .points{
@@ -77,5 +95,17 @@ table {
 
     .mobile-view{
         font-size: 16px;
+    }
+
+    .result-view{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .result-que{
+        overflow: auto;
+        width: 280px;
+        height: 200px;
     }
 }
