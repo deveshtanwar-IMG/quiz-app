@@ -5,7 +5,7 @@ import Result from "./screens/Result/Result"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/quiz-app">
       <Routes>
         <Route path="/" exact element={<Instruction />} />
         <Route path="/questions" exact element={<Questions />} />
